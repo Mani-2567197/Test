@@ -65,7 +65,7 @@ class CarsCardWidget extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Image.network( carData.image ?? ""),
+            child: CacheNetworkImageWidget(imageUrl:carData.image ?? ""),
           ),
           ButtonWidget(buttonTitle: "Book Now", onPressed: (){})
 

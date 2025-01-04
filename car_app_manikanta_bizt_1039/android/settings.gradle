@@ -14,6 +14,17 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
     }
+    buildscript {
+    repositories {
+        google() // Make sure this is included
+        mavenCentral() // Ensure this is included as well
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.1' // Correct placement of classpath dependency
+        // Other classpath dependencies if any
+    }
+}
+
 }
 
 plugins {
