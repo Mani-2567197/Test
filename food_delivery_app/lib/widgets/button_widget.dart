@@ -7,26 +7,26 @@ class ButtonWidget extends StatelessWidget {
       required this.onPressed,
       required this.buttonBgColor,
       required this.buttonWidth,
-      required this.buttonTextColor});
-  final String buttonTitle;
+      required this.buttonTextColor,
+      required this.buttonheight});
+  final Icon buttonTitle;
   final void Function() onPressed;
   final Color buttonBgColor;
   final double buttonWidth;
+  final double buttonheight;
   final Color buttonTextColor;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
         width: buttonWidth,
+        height: buttonheight,
         child: ElevatedButton(
-          onPressed: onPressed,
+          onPressed: (){},
           style: ElevatedButton.styleFrom(
             backgroundColor: buttonBgColor,
           ),
-          child: Text(
-            buttonTitle,
-            style: TextStyle(fontSize: 16, color: buttonTextColor),
-          ),
+          child: buttonTitle,
         ));
   }
 }

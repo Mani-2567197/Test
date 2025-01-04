@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:food_delivery_app/features/sign_in/view/sign_in.dart';
 import 'package:food_delivery_app/features/welcome/view/welcome.dart';
 import 'package:food_delivery_app/routes/routes.dart';
 import 'package:provider/provider.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
        Provider(create: (context) => Welcome()),
+       Provider(create: (context) => SignIn()),
       ],
       child: MaterialApp.router(
         title: 'Flutter Demo',
