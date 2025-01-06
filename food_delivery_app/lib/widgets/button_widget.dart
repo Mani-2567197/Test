@@ -3,18 +3,22 @@ import 'package:flutter/material.dart';
 class ButtonWidget extends StatelessWidget {
   const ButtonWidget(
       {super.key,
-      required this.buttonTitle,
+        this.buttonTitle,
       required this.onPressed,
-      required this.buttonBgColor,
-      required this.buttonWidth,
-      required this.buttonTextColor,
-      required this.buttonheight});
-  final Icon buttonTitle;
+      this.buttonBgColor,
+       this.buttonWidth,
+       this.buttonradius,
+       this.buttonTextColor,
+       this.buttonheight,
+       this.buttonIcon});
+  final Icon? buttonIcon;
   final void Function() onPressed;
-  final Color buttonBgColor;
-  final double buttonWidth;
-  final double buttonheight;
-  final Color buttonTextColor;
+  final Color? buttonBgColor;
+  final double? buttonWidth;
+  final double? buttonheight;
+  final Color? buttonTextColor;
+  final String? buttonTitle;
+  final double? buttonradius;
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +26,19 @@ class ButtonWidget extends StatelessWidget {
         width: buttonWidth,
         height: buttonheight,
         child: ElevatedButton(
+         
           onPressed: (){},
           style: ElevatedButton.styleFrom(
             backgroundColor: buttonBgColor,
+
           ),
-          child: buttonTitle,
+          child: Text(
+            buttonTitle!,
+            style: TextStyle(
+              color: buttonTextColor,
+            ),
+          ),
+         
         ));
   }
 }

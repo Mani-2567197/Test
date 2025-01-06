@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/utils/image_constants.dart';
 
 class LogoWidget extends StatelessWidget {
   final double left, width, height;
+  final String image;
   const LogoWidget({
     super.key,
     required this.width,
     required this.height,
-    required this.left
+    required this.left,
+    required this.image,
   });
 
   @override
@@ -15,7 +16,7 @@ class LogoWidget extends StatelessWidget {
     return Positioned(
       left: left,
       child: Image.asset(
-        ImageConstants.logo,
+        image,
         width: width,
         height: height,
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:food_delivery_app/features/new_password/view/newpassword.dart';
 import 'package:food_delivery_app/features/sign_in/view/sign_in.dart';
 import 'package:food_delivery_app/features/welcome/view/welcome.dart';
 import 'package:food_delivery_app/routes/routes.dart';
@@ -22,13 +23,13 @@ void loader() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
        Provider(create: (context) => Welcome()),
        Provider(create: (context) => SignIn()),
+       Provider(create: (context) => Newpassword()),
       ],
       child: MaterialApp.router(
         title: 'Flutter Demo',
